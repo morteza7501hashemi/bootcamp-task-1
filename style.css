@@ -1,0 +1,180 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+html {
+    font-family: "Vazir";
+    font-size: 62.5%;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-white);
+}
+
+
+/* Variables */
+
+:root {
+    --color-primary: #234894;
+    --color-primary-light: #afcedd;
+
+    --color-secondary: #219F95;
+
+    --color-gray: #696969;
+
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+
+/* Typography */
+
+.heading-primary {
+    color: var(--color-black);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 750px) {
+    .heading-primary {
+        margin-bottom: 2rem;
+    }
+}
+
+.heading-secondary {
+    color: var(--color-black);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+/* Layouts */
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.requests {
+    padding: 4rem;
+}
+
+@media screen and (max-width: 750px) {
+    .requests {
+        padding: 1.5rem;
+    }    
+}
+
+.requests__container {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .requests__container {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .requests__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Components */
+
+.btn {
+    width: max-content;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+}
+
+/* ----------------------------------------------------- */
+
+.request-box {
+    padding: 1rem;
+}
+
+.request-box__header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.request-box__number {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--color-primary-light);
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+}
+
+.request-box__title {
+    color: var(--color-primary);
+}
+
+.request-box__date {
+    color: var(--color-gray);
+    font-size: 1.4rem;
+    margin-right: auto;
+}
+
+.request-box--body {
+    margin-bottom: 1rem;
+}
+
+.request-box__id {
+    color: var(--color-gray);
+    font-size: 1.2rem;
+}
+
+.request-box__footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.request-box__img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.request-box__name {
+    font-weight: bold;
+}
+
+.request-box .btn {
+    margin-right: auto;
+}
